@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
     <title>Document</title>
 </head>
 
+<h1>Consulta de noticias</h1>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+
 <table >
     <?php
-        $conexion = mysqli_connect("127.0.0.1", "cursophp", "", "lindavista" );
+
+        $conexion = mysqli_connect("127.0.0.1", "root", "", "lindavista");
 
         #mysqli_select_db ("lindavista") or die ("No se puede acceder a la base de datos");
 
