@@ -14,7 +14,7 @@
 <table >
     <?php
 
-        $conexion = mysqli_connect("127.0.0.1", "root", "", "lindavista");
+        $conexion = mysqli_connect("localhost", "cursophp-ad1", "php.hph", "lindavista");
 
         #mysqli_select_db ("lindavista") or die ("No se puede acceder a la base de datos");
 
@@ -37,6 +37,7 @@
             print "<td bgcolor = 'Gainsboro'>" . $fila["imagen"] . "</td>";
             echo '<tr></tr>';
         }
+        mysqli_close($conexion);
 
     ?>
 </table>
