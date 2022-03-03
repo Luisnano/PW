@@ -29,6 +29,14 @@
             </select>
     </p>
 
+    <p>¿Que deporye te gusta?:<br>
+        
+        Futbol: <input tyoe = "checkbox" name = "futbol" >
+        Baloncesto: <input tyoe = "checkbox" name = "baloncesto" >
+        Balonmano: <input tyoe = "checkbox" name = "balonmano" >
+    
+    </p>
+
     <p>
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">

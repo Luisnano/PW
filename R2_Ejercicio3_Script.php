@@ -15,34 +15,20 @@
 
         #Abrimos la conexion con la base de datos
 
-        $conexion = mysqli_connect("localhost", "cursophp-ad1", "php.hph", "lindavista");
-
-        if ($conexion == false){
-            echo "Conexión rechazada por la base de datos";
-        }
+        $conexion = mysqli_connect("localhost", "root", "root", "lindavista");
 
         $query_inicial = mysqli_query($conexion, "SELECT * FROM noticias");
 
-        $nfilas = mysqli_num_rows ($query_inicial);
-
-        $id_noticia_nueva = $nfilas + 1;
-
-        echo "Debug 1<br>";
-
         $fecha = date("y-m-d");
 
-        $query_insercion = "INSERT INTO noticias VALUES (titulo = $titulo, texto = $texto, categoria = $categoria)";
+        $query_insercion = "INSERT INTO noticias (titulo,texto,categoria) VALUES ('" . $titulo . "', '" . $texto . "', '" . $categoria . "' )";
 
-        if (mysqli_query($conexion, $query_insercion)==false){
-            echo "Esta query esta mal";
-        }
-
-        echo "Debug 2<br>";
+        mysqli_query($conexion, $query_insercion);
 
         mysqli_close($conexion);
 
-    
-    
+        echo "Fin de la conexión";
+
     ?>
 </body>
 </html>
