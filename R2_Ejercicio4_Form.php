@@ -56,7 +56,7 @@
         {
             #Aqui lo dejo, tenemos todos los indices en $_POST, la cosa es que ahora hay que encontrar las 
             #   filas de la consulta a las que se refiere.
-            $query_eliminacion = "DELETE FROM noticias WHERE id = $valor"
+            $query_eliminacion = "DELETE FROM noticias WHERE id = $valor";
 
             mysqli_query($conexion, $query_eliminacion);
 
